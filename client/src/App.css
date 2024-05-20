@@ -1,0 +1,86 @@
+.postscontainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 60%;
+
+}
+
+.postcard{
+ 
+   
+    width: 300px;
+    -webkit-box-shadow: inset 0px -1px 8px -2px rgba(0,0,0,0.65);
+-moz-box-shadow: inset 0px -1px 8px -2px rgba(0,0,0,0.65);
+box-shadow: inset 0px -1px 8px -2px rgba(0,0,0,0.65);
+    
+    
+}
+.creatememories{
+  display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   max-width: 50%;
+  
+    float: right
+}
+.logout {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    
+  }
+  
+  .logout:hover {
+    background-color: #555555;
+    color: white;
+  }
+
+
+
+
+
+@media only screen and (max-width: 950px) {
+  
+    .postscontainer{
+        display: flex;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .postcard{
+        max-width: 55%;
+    }
+    #root{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      
+    }
+
+   
+  }
+  @media only screen and (max-width: 700px) {
+  
+    .postscontainer{
+        display: flex;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .postcard{
+        max-width: 80%;
+        margin: auto;
+    }
+    #root{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      
+    }
+    .creatememories{
+       max-width: 80%;
+       margin: auto;
+     
+    }
+
+   
+  }
