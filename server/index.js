@@ -19,7 +19,7 @@ app.post('/login',login);
 
 
 
-const CONNECTION_URL = "mongodb+srv://yogesh:yogeshmalkani@cluster0.fuorw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const CONNECTION_URL = "mongodb://localhost:27017/fsadProject";
 const PORT = process.env.PORT || 5000;
 mongoose.connect(CONNECTION_URL,{})
 .then(()=> app.listen(PORT,()=>console.log('server running on ',PORT)))
