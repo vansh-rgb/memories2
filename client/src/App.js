@@ -21,28 +21,17 @@ setcurrId(id);
     const dispatch = useDispatch();
     useEffect(() => {
     dispatch(getposts())
-    
-      
     }, [dispatch]);
     useEffect(() => {
       setusername(localStorage.getItem('usernames'));
-    
-     
     }, [])
     
-    
     return(
-       
         <BrowserRouter>
-         <Routes>
-       
-       
-        <Route path="/" element={<Homepage token={username} updatedid={updateid} id={currId} />} />
-        <Route path="/signup" element={<Signup/>}/>
-        </Routes>
-
-
-       
+          <Routes>
+            <Route path="/" element={<Homepage token={username} updatedid={updateid} id={currId} />} />
+            <Route path="/signup" element={<Signup/>}/>
+          </Routes>
         </BrowserRouter>
     )
 }

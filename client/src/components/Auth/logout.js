@@ -8,9 +8,7 @@ export default function Logout() {
           backgroundColor: "skyblue",
           color: "white"
         }}
-        onClick={()=>{ localStorage.removeItem('token');
-       
-    }}
+        onClick={()=>{ localStorage.removeItem('token');}}
         >Logout
         
         </Button>

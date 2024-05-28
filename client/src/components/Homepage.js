@@ -13,8 +13,6 @@ export default function Homepage(props) {
       :
       <Login/>
       }
-     
       </>
-    
   )
 }
