@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Postcard from './postcard';
-import Loading from '../loading/loading';
 
 const  Posts = ({updateId})=> {
   var posts = null;
