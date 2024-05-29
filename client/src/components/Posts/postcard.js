@@ -18,22 +18,17 @@ import { IconButton } from '@mui/material';
 
 const Postcard = (props) => {
   const user = localStorage.getItem('usernames');
-  
- 
   const dispatch = useDispatch();
   const classes = useStyles();
   function deletepost(){
     dispatch(deletePost(props.post._id));
   }
   function likepost(){
-    
     dispatch(likePost(props.post._id,user));
   }
 
-
-
   return (
-    <Card   className="postcard" >
+    <Card className="postcard" >
        <div style={{padding: "10px 10px 10px 10px"}} >
         <Typography variant="h6">{props.post.creator}</Typography>
         <Typography variant="body2">{moment(props.post.createdAt).fromNow()}</Typography>
@@ -50,7 +45,7 @@ const Postcard = (props) => {
       <CardContent>
         <Typography className="postmessage" variant="body2" color="textSecondary" component="p">{props?.post?.message}</Typography>
       </CardContent>
-      <CardActions className={classes.cardActions} className="actionscard">
+      <CardActions className={classes.cardActions}>
          <Button size="small" color="primary" onClick={()=>{likepost()}} ><RecommendIcon fontSize="small"   /> Like {props?.post?.likeCount?.length} </Button>
         <Button size="small" color="primary" onClick={()=>{deletepost()}}><DeleteIcon fontSize="small" /> Delete</Button> 
         <IconButton onClick={()=>props.updateId(props?.post?._id)}  ><UpdateIcon/></IconButton>
